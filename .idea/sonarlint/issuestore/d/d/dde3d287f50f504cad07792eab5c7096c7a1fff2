@@ -1,0 +1,7 @@
+
+b	java:S101"MRename this class name to match the regular expression '^[A-Z][a-zA-Z0-9]*$'.(√Ï…º
+o	java:S120"ZRename this package name to match the regular expression '^[a-z_]+(\.[a-z_][a-z0-9_]*)*$'.(ﬂç°ë
+i
+java:S3008"SRename this field "_scanner" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(¸⁄ùœ
+P
+java:S1118":Add a private constructor to hide the implicit public one.(√Ï…º
