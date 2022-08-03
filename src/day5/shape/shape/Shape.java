@@ -10,7 +10,7 @@ import static day5.shape.color.EnumColor.getRandomColor;
  * @author kokotov
  * @version 1.0
  */
-public abstract class Shape {
+public abstract class Shape implements CloneableShape {
     private int id;
     private String color;
     private double area;
