@@ -1,7 +1,7 @@
 package day5.shape.shape.triangle;
 
 /**
- * Класс равнобедренного треугольника
+ * равносторонний треугольник
  * @author kokotov
  * @version 1.0
  */
@@ -30,6 +30,6 @@ public class EquilateralTriangle extends IsoscelesTriangle {
     }
 
     public EquilateralTriangle (double a) {
-        super(a, a, a);
+        super(a, 60);
     }
 }

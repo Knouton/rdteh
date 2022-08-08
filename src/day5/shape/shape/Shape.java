@@ -1,29 +1,29 @@
 package day5.shape.shape;
-
-import day5.shape.color.EnumColor;
-
-import java.util.Arrays;
+import java.util.UUID;
 
 import static day5.shape.color.EnumColor.getRandomColor;
 
 /**
+ * фигура
  * @author kokotov
  * @version 1.0
  */
 public abstract class Shape implements CloneableShape {
-    private int id;
-    private String color;
-    private double area;
-    abstract public double getArea();
+    private UUID id = UUID.randomUUID();
+    private String color = getRandomColorString();
 
-    public int getId() {
+    private double area;
+    public abstract  double getArea();
+
+
+    public UUID getId() {
         return id;
     }
     public String getColor() {
         return color;
     }
 
-    public void setId(int id) {
+    public void setId(UUID id) {
         this.id = id;
     }
 
@@ -31,7 +31,11 @@ public abstract class Shape implements CloneableShape {
         this.color = color;
     }
 
-    public void seRandomtColor() {
+    public void setRandomColor() {
         setColor(getRandomColor());
+    }
+
+    private String getRandomColorString() {
+        return getRandomColor();
     }
 }

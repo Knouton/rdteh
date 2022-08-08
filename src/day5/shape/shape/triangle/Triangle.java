@@ -7,45 +7,58 @@ import day5.shape.shape.Shape;
  * @version 1.0
  */
 public class Triangle extends Shape {
-
-    private double a;
-    private double b;
-    private double c;
+    private double sideA;
+    private double sideB;
+    private double sideC;
 
     private float angle;
 
     /**
      *
-     * @param a - сторона a
-     * @param b - сторона b
-     * @param c - сторона c
+     * @param sideA - сторона a
+     * @param sideB - сторона b
+     * @param sideC - сторона c
      */
-    public Triangle(double a, double b, double c) {
-        this.a = a;
-        this.b = b;
-        this.c = c;
+    public Triangle(double sideA, double sideB, double sideC) {
+        this.sideA = sideA;
+        this.sideB = sideB;
+        this.sideC = sideC;
     }
 
     /**
      *
-     * @param a - сторона a
-     * @param b - сторона b
+     * @param sideA - сторона a
+     * @param sideB - сторона b
      * @param angle - угол
      */
-    public Triangle(double a, double b, float angle) {
-        this.a = a;
-        this.b = b;
+    public Triangle(double sideA, double sideB, float angle) {
+        this.sideA = sideA;
+        this.sideB = sideB;
         this.angle = angle;
     }
 
+    /**
+     * Получить площадь
+     * @return
+     */
     @Override
     public double getArea() {
-        return calcArea(this.a, this.b, this.c, this.angle);
+        return calcArea(this.sideA, this.sideB, this.sideC, this.angle);
     }
 
+    /**
+     * Посчитать площадь в зависимости от переданных параметров, если сторона c неизвестна, то через синус угла,
+     * иначе через полупериметр
+     * @param a - сторона a
+     * @param b - сторона b
+     * @param c - сторона c
+     * @param angle - угол
+     * @return
+     */
     private double calcArea(double a, double b, double c, float angle) {
         if (c == 0.0) {
-            return 0.5 * a * b * Math.sin(angle);
+
+            return 0.5 * a * b * Math.sin(Math.toRadians(angle));
         } else {
             double semiPerimeter = (a + b + c) /2 ;
             double high = 2 * Math.sqrt(semiPerimeter
@@ -60,6 +73,16 @@ public class Triangle extends Shape {
 
     @Override
     public Object clone(double scale) {
-        return null;
+        if (sideC != 0.0) {
+            return new Triangle(this.sideA * scale, this.sideB * scale, this.sideC * scale);
+        } else {
+            return new Triangle(this.sideA * scale, this.sideB * scale, this.angle);
+        }
+    }
+
+    public boolean isTriangleExits() {
+        return (this.sideA + this.sideB > this.sideC
+                && this.sideA + this.sideC > this.sideB
+                && this.sideB + this.sideC > this.sideA);
     }
 }
