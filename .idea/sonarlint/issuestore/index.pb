@@ -81,3 +81,9 @@ b
 2src/day5/shape/factory/ellipse/EllipseFactory.java,2\e\2e8a0736cd25ad6a7119fe0335a7f3cd740cc623
 S
 #src/day5/shape/color/EnumColor.java,2\a\2ab21c6afe64c7394ad6749a8cd364afbb2fe9c2
+=
+src/Main.java,9\2\924f089edb4af5ee45c8a9d1129cd28e2b368138
+`
+0src/day5/shape/factory/random/RandomNumbers.java,3\d\3dab31ccaf5df192f96d98c24b209955bf51c957
+[
++src/day5/shape/shape/triangle/Triangle.java,e\5\e563bfb8a2ff747f914396508bc0d2907cfba2ab

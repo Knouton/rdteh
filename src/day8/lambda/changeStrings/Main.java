@@ -14,8 +14,8 @@ public class Main {
         arrayList.add("ccaCac");
         arrayList.add("caca");
 
-        arrayList.replaceAll(String::toLowerCase);
-        arrayList.sort(Comparator.comparingInt(String::length));
-        arrayList.forEach(System.out::println);
+        arrayList.replaceAll(String::toLowerCase); //в нижний регистр
+        arrayList.sort(Comparator.comparingInt(String::length)); //отсортировать по длинне
+        arrayList.forEach(System.out::println); //вывести все строки в консоль
     }
 }
