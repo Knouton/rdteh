@@ -1,0 +1,12 @@
+
+g	java:S112!"FDefine and throw a dedicated exception instead of using a generic one.(Ò‚Òéüÿÿÿÿ8´ÜÀ¾¥0
+t	java:S120"ZRename this package name to match the regular expression '^[a-z_]+(\.[a-z_][a-z0-9_]*)*$'.(¤Æò ÿÿÿÿÿ
+g
+java:S1223"LRename this method to prevent any misunderstanding or make it a constructor.(…ÛŞÑúÿÿÿÿ
+l	java:S116"WRename this field "_outStrategy" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(±ÑÃÉ
+x
+java:S1450"[Remove the "_outStrategy" field and declare it as a local variable in the relevant methods.(±ÑÃÉ8á´È¥0
+h	java:S100"NRename this method name to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(…ÛŞÑúÿÿÿÿ
+]	java:S125"<This block of commented-out lines of code should be removed.(ÜøŞéüÿÿÿÿ8‚á´È¥0
+M
+java:S1068"0Remove this unused "_outStrategy" private field.(±ÑÃÉ8…á´È¥0

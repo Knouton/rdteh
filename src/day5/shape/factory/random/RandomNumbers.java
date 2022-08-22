@@ -17,12 +17,12 @@ public class RandomNumbers {
         Random random = new Random();
         return random.nextDouble(diff)+min;
     }
-    public static float getRandomAngle(){
-        float min = 60;
-        float max = 120;
-        float diff = max - min;
+    public static int getRandomAngle(){
+        int min = 60;
+        int max = 120;
+        int diff = max - min;
         Random random = new Random();
-        return random.nextFloat(diff)+min;
+        return random.nextInt(diff)+min;
     }
 
     public static double getRandomDoubleForTriangle() {

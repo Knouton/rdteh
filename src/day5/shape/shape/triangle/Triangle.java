@@ -31,7 +31,7 @@ public class Triangle extends Shape {
      * @param sideB - сторона b
      * @param angle - угол
      */
-    public Triangle(double sideA, double sideB, float angle) {
+    public Triangle(double sideA, double sideB, int angle) {
         this.sideA = sideA;
         this.sideB = sideB;
         this.angle = angle;
